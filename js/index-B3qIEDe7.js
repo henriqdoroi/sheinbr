@@ -17945,7 +17945,7 @@ const mC = () => {
                         className: "text-xs text-muted-foreground",
                         children: "2.847 avaliações hoje"
                     })]
-                }), o.jsx("div", {
+                }), i.jsx("div", {
                     className: "w-px h-4 bg-border"
                 }), o.jsx("span", {
                     className: "text-xs text-muted-foreground",
