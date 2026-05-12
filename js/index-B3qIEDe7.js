@@ -17946,8 +17946,9 @@ const mC = () => {
                         children: "2.847 avaliações hoje"
                     })]
                 })]
-           })]
-      })
+            })]
+        })]
+    })
 }
   , pC = () => i.jsx(mC, {})
   , hC = ({number: e, title: t, delay: n}) => i.jsx("div", {
