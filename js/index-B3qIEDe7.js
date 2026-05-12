@@ -19620,7 +19620,7 @@ const Dp = [{
     description: "Ao entrar no programa, você avalia as peças e ganha dinheiro por cada avaliação."
 }, {
     number: "02",
-    title: "Avalias novos modelos da Shein",
+    title: "Avalia novos modelos da Shein",
     description: "Veja peças exclusivas e dê sua opinião sincera. Cada avaliação soma dinheiro ao seu saldo."
 }, {
     number: "03",
@@ -19642,10 +19642,10 @@ const Dp = [{
     }
     , []);
     const s = () => {
-        localStorage.setItem("selectedCurrency", "EUR"),
+        localStorage.setItem("selectedCurrency", "BRL"),
         $e("ClickButton", {
             content_name: "Start Evaluation",
-            currency: "EUR"
+            currency: "BRL"
         }),
         e("/evaluacion")
     }
