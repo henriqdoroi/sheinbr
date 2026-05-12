@@ -17912,7 +17912,7 @@ const mC = () => {
                     style: {
                         animationDelay: "0.3s"
                     },
-                    children: ["A Shein paga-te por", " ", i.jsx("span", {
+                    children: ["A Shein te paga para", " ", i.jsx("span", {
                         className: "text-gradient",
                         children: "avaliar a nova coleção"
                     })]
@@ -17945,6 +17945,11 @@ const mC = () => {
                         className: "text-xs text-muted-foreground",
                         children: "2.847 avaliações hoje"
                     })]
+                }), o.jsx("div", {
+                    className: "w-px h-4 bg-border"
+                }), o.jsx("span", {
+                    className: "text-xs text-muted-foreground",
+                    children: "100% gratuito"
                 })]
             })]
         })]
