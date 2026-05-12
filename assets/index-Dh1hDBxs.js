@@ -18871,7 +18871,7 @@ const Zr = [{
             path: "/datos-entrega2990",
             element: o.jsx(L1, {})
         }), o.jsx(ve, {
-            path: "/retiro",
+            path: "/saque",
             element: o.jsx(F0, {})
         }), o.jsx(ve, {
             path: "*",
