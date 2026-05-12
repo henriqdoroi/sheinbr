@@ -17937,15 +17937,15 @@ const mC = () => {
                 style: {
                     animationDelay: "0.9s"
                 },
-                children: [i.jsxs("div", {
+               children: [o.jsxs("div", {
                     className: "flex items-center gap-2",
-                    children: [i.jsx("div", {
+                    children: [o.jsx("div", {
                         className: "w-2 h-2 bg-primary rounded-full animate-pulse-soft"
-                    }), i.jsx("span", {
+                    }), o.jsx("span", {
                         className: "text-xs text-muted-foreground",
-                        children: "2.847 avaliações hoje"
+                        children: "2.847 evaluaciones hoy"
                     })]
-                }), i.jsx("div", {
+                }), o.jsx("div", {
                     className: "w-px h-4 bg-border"
                 }), o.jsx("span", {
                     className: "text-xs text-muted-foreground",
