@@ -17937,24 +17937,18 @@ const mC = () => {
                 style: {
                     animationDelay: "0.9s"
                 },
-               children: [o.jsxs("div", {
+               children: [i.jsxs("div", {
                     className: "flex items-center gap-2",
-                    children: [o.jsx("div", {
+                    children: [i.jsx("div", {
                         className: "w-2 h-2 bg-primary rounded-full animate-pulse-soft"
-                    }), o.jsx("span", {
+                    }), i.jsx("span", {
                         className: "text-xs text-muted-foreground",
-                        children: "2.847 evaluaciones hoy"
+                        children: "2.847 avaliações hoje"
                     })]
-                }), o.jsx("div", {
-                    className: "w-px h-4 bg-border"
-                }), o.jsx("span", {
-                    className: "text-xs text-muted-foreground",
-                    children: "100% gratuito"
                 })]
-            })]
-        })]
-    })
-}
+           })]
+      })
+    }
   , pC = () => i.jsx(mC, {})
   , hC = ({number: e, title: t, delay: n}) => i.jsx("div", {
     className: "opacity-0 animate-slide-up",
