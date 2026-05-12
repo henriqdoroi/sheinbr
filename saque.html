@@ -8,121 +8,97 @@
     <script src="https://cdn.tailwindcss.com"></script>
     
     <style>
-        @keyframes slideUpFade {
-            from { opacity: 0; transform: translateY(20px); }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        .animate-slide-up {
-            animation: slideUpFade 0.6s ease-out forwards;
+        .animate-fade {
+            animation: fadeIn 0.5s ease-out forwards;
         }
     </style>
 </head>
 
-<body class="bg-[#fafafa] text-gray-900 antialiased min-h-screen font-sans">
-    <div id="root">
-        <div class="min-h-screen flex flex-col">
+<body class="bg-white text-gray-900 antialiased min-h-screen flex flex-col">
+    
+    <header class="w-full bg-white border-b-[4px] border-black h-16 flex items-center justify-center sticky top-0 z-50">
+        <h1 class="text-xl font-black tracking-[0.25em] text-black uppercase">LOGO</h1>
+    </header>
+
+    <main class="flex-1 w-full max-w-md mx-auto pt-8 pb-12 animate-fade">
+        
+        <div class="flex justify-center mb-8">
+            <div class="inline-flex items-center gap-2 px-5 py-1.5 bg-[#ecfdf5] border border-[#d1fae5] rounded-full">
+                <span class="text-[#10b981] font-bold text-sm">$</span>
+                <span id="animated-balance" class="text-[17px] font-extrabold text-[#10b981]">R$ 0,00</span>
+                <span class="text-[10px] text-[#10b981] font-bold uppercase tracking-wider opacity-80">saldo</span>
+            </div>
+        </div>
+
+        <div class="text-center px-6 mb-8">
+            <div class="flex justify-center mb-4">
+                <svg width="60" height="60" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 58C45.2548 58 56 47.2548 56 34C56 20.7452 45.2548 16 32 16C18.7452 16 8 20.7452 8 34C8 47.2548 18.7452 58 32 58Z" fill="#FACC15" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M22 16C22 10 26 6 32 6C38 6 42 10 42 16H22Z" fill="#FACC15" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+                    <path d="M20 16H44" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                    <text x="32" y="42" font-family="Arial" font-size="26" font-weight="900" fill="#10B981" text-anchor="middle">$</text>
+                </svg>
+            </div>
             
-            <header class="bg-white border-b-[3px] border-black sticky top-0 z-50">
-                <div class="max-w-md mx-auto px-6 h-16 flex items-center justify-center">
-                    <h1 class="text-xl font-black tracking-[0.2em] uppercase text-black">LOGO</h1>
-                </div>
-            </header>
+            <h2 class="text-2xl font-extrabold text-black mb-2">Avaliação completa!</h2>
+            <p class="text-[14px] text-gray-500 font-medium leading-relaxed px-2">
+                Você ganhou dinheiro por cada peça que avaliou. Cadastre sua chave PIX abaixo para receber.
+            </p>
+        </div>
 
-            <main class="flex-1 pt-8 pb-32 px-5 max-w-md mx-auto w-full animate-slide-up">
-                
-                <div class="flex justify-center mb-8">
-                    <div class="inline-flex items-center gap-2 px-5 py-2 bg-[#e8f8f0] border border-[#bbf7d0] rounded-full shadow-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#00c853]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span id="animated-balance-top" class="text-[17px] font-extrabold text-[#00c853]">R$ 0,00</span>
-                        <span class="text-[10px] text-[#00c853]/70 font-bold uppercase tracking-wider">saldo</span>
-                    </div>
-                </div>
-
-                <div class="text-center mb-8">
-                    <div class="mx-auto w-14 h-14 bg-[#ffeaa7] border-[2.5px] border-black rounded-full flex items-center justify-center mb-5 shadow-[0_4px_0_0_rgba(0,0,0,1)]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            <circle cx="12" cy="12" r="9" />
-                            <path d="M12 7v10m-3-5h6" />
-                        </svg>
-                    </div>
-                    
-                    <h2 class="text-[22px] font-extrabold text-black mb-2">Avaliação completa!</h2>
-                    <p class="text-[14px] text-gray-500 font-medium leading-snug px-2">
-                        Preencha os dados da sua conta abaixo para receber o pagamento pelas suas avaliações.
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] space-y-5">
-                    
-                    <div class="space-y-1.5">
-                        <label class="block text-[13px] font-bold text-gray-800">Tipo de Chave PIX</label>
-                        <div class="relative">
-                            <select class="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl text-gray-800 text-[15px] focus:ring-2 focus:ring-[#00c853] focus:border-transparent outline-none appearance-none font-medium transition-all">
-                                <option value="" disabled selected>Selecione...</option>
-                                <option value="cpf">CPF / CNPJ</option>
-                                <option value="telefone">Telefone Celular</option>
-                                <option value="email">E-mail</option>
-                                <option value="aleatoria">Chave Aleatória</option>
-                            </select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-500">
-                                <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
-                            </div>
+        <div class="mx-5 bg-[#f0fdf4] border border-[#bbf7d0] rounded-2xl p-6 shadow-sm">
+            
+            <form class="space-y-4">
+                <div class="space-y-1.5">
+                    <label class="block text-[13px] font-bold text-gray-800">Tipo de Chave PIX</label>
+                    <div class="relative">
+                        <select class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-700 text-[14px] focus:ring-2 focus:ring-[#10b981] focus:border-transparent outline-none appearance-none font-medium">
+                            <option value="" disabled selected>Selecione...</option>
+                            <option value="cpf">CPF / CNPJ</option>
+                            <option value="telefone">Telefone Celular</option>
+                            <option value="email">E-mail</option>
+                            <option value="aleatoria">Chave Aleatória</option>
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
                         </div>
                     </div>
-
-                    <div class="space-y-1.5">
-                        <label class="block text-[13px] font-bold text-gray-800">Sua Chave PIX</label>
-                        <input type="text" placeholder="Digite sua chave" class="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl text-gray-800 text-[15px] focus:ring-2 focus:ring-[#00c853] focus:border-transparent outline-none font-medium transition-all placeholder-gray-400">
-                    </div>
-
-                    <div class="space-y-1.5">
-                        <label class="block text-[13px] font-bold text-gray-800">Nome do Titular</label>
-                        <input type="text" placeholder="Nome completo" class="w-full px-4 py-3.5 bg-white border border-gray-200 rounded-xl text-gray-800 text-[15px] focus:ring-2 focus:ring-[#00c853] focus:border-transparent outline-none font-medium transition-all placeholder-gray-400">
-                    </div>
-
-                    <button class="w-full flex items-center justify-center gap-2 mt-2 px-4 py-4 bg-[#00c853] hover:bg-[#00b048] text-white text-[16px] font-extrabold rounded-xl transition-all shadow-lg shadow-[#00c853]/20 active:scale-[0.98]">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                        Finalizar Saque
-                    </button>
-                    
-                    <div class="pt-2 flex items-center justify-center gap-1.5 text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                        </svg>
-                        <p class="text-[11px] font-semibold uppercase tracking-wide">
-                            Pagamento processado de forma segura
-                        </p>
-                    </div>
                 </div>
-            </main>
 
-            <footer class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 pb-safe">
-                <div class="max-w-md mx-auto px-6 py-4 flex items-center justify-between">
-                    <div class="flex flex-col">
-                        <span class="text-[11px] font-bold text-gray-800 uppercase tracking-wider mb-0.5">Saldo total</span>
-                    </div>
-                    <div class="text-right">
-                        <span id="animated-balance-bottom" class="text-[22px] font-extrabold text-[#00c853]">R$ 0,00</span>
-                    </div>
+                <div class="space-y-1.5">
+                    <label class="block text-[13px] font-bold text-gray-800">Sua Chave PIX</label>
+                    <input type="text" placeholder="Digite sua chave" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-700 text-[14px] focus:ring-2 focus:ring-[#10b981] focus:border-transparent outline-none font-medium placeholder-gray-400">
                 </div>
-            </footer>
-            
+
+                <div class="space-y-1.5">
+                    <label class="block text-[13px] font-bold text-gray-800">Nome do Titular</label>
+                    <input type="text" placeholder="Nome completo" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-gray-700 text-[14px] focus:ring-2 focus:ring-[#10b981] focus:border-transparent outline-none font-medium placeholder-gray-400">
+                </div>
+
+                <button type="button" class="w-full flex items-center justify-center gap-2 mt-2 px-4 py-3.5 bg-[#10b981] hover:bg-[#059669] text-white text-[15px] font-bold rounded-xl transition-all shadow-lg shadow-[#10b981]/20 active:scale-[0.98]">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Finalizar Saque
+                </button>
+            </form>
+
         </div>
-    </div>
+
+    </main>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-            const topBalance = document.getElementById("animated-balance-top");
-            const bottomBalance = document.getElementById("animated-balance-bottom");
-            
+            const balanceElement = document.getElementById("animated-balance");
             const targetValue = 755.49;
-            const duration = 2500; // 2.5 segundos para dar um efeito mais satisfatório
+            const duration = 2000; 
             
             function animateValue(element, start, end, duration) {
                 let startTimestamp = null;
@@ -130,12 +106,10 @@
                     if (!startTimestamp) startTimestamp = timestamp;
                     const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                     
-                    // Efeito ease-out
+                    // Curva de animação suave
                     const easeOutProgress = 1 - Math.pow(1 - progress, 3);
-                    
                     const currentVal = (easeOutProgress * (end - start) + start).toFixed(2);
                     
-                    // Formata com vírgula R$ 755,49
                     element.innerHTML = 'R$ ' + currentVal.replace('.', ',');
                     
                     if (progress < 1) {
@@ -147,8 +121,7 @@
                 window.requestAnimationFrame(step);
             }
 
-            animateValue(topBalance, 0, targetValue, duration);
-            animateValue(bottomBalance, 0, targetValue, duration);
+            animateValue(balanceElement, 0, targetValue, duration);
         });
     </script>
 </body>
