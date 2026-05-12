@@ -17937,7 +17937,7 @@ const mC = () => {
                 style: {
                     animationDelay: "0.9s"
                 },
-               children: [i.jsxs("div", {
+                children: [i.jsxs("div", {
                     className: "flex items-center gap-2",
                     children: [i.jsx("div", {
                         className: "w-2 h-2 bg-primary rounded-full animate-pulse-soft"
@@ -17948,7 +17948,7 @@ const mC = () => {
                 })]
            })]
       })
-    }
+}
   , pC = () => i.jsx(mC, {})
   , hC = ({number: e, title: t, delay: n}) => i.jsx("div", {
     className: "opacity-0 animate-slide-up",
