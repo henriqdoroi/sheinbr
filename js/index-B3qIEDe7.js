@@ -19628,7 +19628,7 @@ const Dp = [{
     description: "Quanto mais peças você avaliar, mais ganha. Sua opinião tem valor real para a Shein."
 }, {
     number: "04",
-    title: "Levanta o seu dinheiro quando quiseres",
+    title: "Saque seu dinheiro quando quiser",
     description: ""
 }]
   , C2 = () => {
