@@ -17903,7 +17903,7 @@ const mC = () => {
                 },
                 children: i.jsx("span", {
                     className: "text-xs font-bold tracking-[0.4em] uppercase text-muted-foreground block",
-                    children: "Programa Oficial Shein 2026 Brasil"
+                    children: "Programa Oficial Shein 2026"
                 })
             }), i.jsxs("div", {
                 className: "max-w-2xl text-center space-y-6 px-6",
